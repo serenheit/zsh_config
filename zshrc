@@ -15,7 +15,7 @@ for config_file ($ZSH/lib/*.zsh); do
   source $config_file
 done
 
-plugins=(git osx rails colored-man-pages)
+plugins=(colored-man-pages zsh-syntax-highlighting)
 
 is_plugin() {
   local base_dir=$1
@@ -69,4 +69,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 if [ -f ~/.aliases ]; then
   source ~/.aliases
+fi
+
+if [ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
